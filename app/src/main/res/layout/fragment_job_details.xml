@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.jobs.JobDetails.JobDetailsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_close" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/root_padding">
+
+        <TextView
+            android:id="@+id/fjb_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Software Engineer, Back End"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/fjd_icon_iv"
+            android:layout_width="@dimen/_41sdp"
+            android:layout_height="@dimen/_41sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:src="@drawable/image_google"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fjb_title_tv" />
+
+        <TextView
+            android:id="@+id/fjb_company_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            app:layout_constraintBottom_toTopOf="@+id/fjb_location_tv"
+            app:layout_constraintStart_toEndOf="@+id/fjd_icon_iv"
+            app:layout_constraintTop_toTopOf="@+id/fjd_icon_iv" />
+
+        <TextView
+            android:id="@+id/fjb_location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gurugram, Haryana, India"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintBottom_toBottomOf="@+id/fjd_icon_iv"
+            app:layout_constraintStart_toStartOf="@+id/fjb_company_tv"
+            app:layout_constraintTop_toBottomOf="@+id/fjb_company_tv" />
+
+
+        <TextView
+            android:id="@+id/fjb_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:text="11 hours ago"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fjd_icon_iv" />
+
+        <TextView
+            android:id="@+id/fjb_applicants_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="92 applicants"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintStart_toEndOf="@+id/fjb_time_tv"
+            app:layout_constraintTop_toTopOf="@+id/fjb_time_tv" />
+
+
+        <TextView
+            android:id="@+id/fjb_job_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:gravity="center"
+            android:text="Full-time"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:drawableStartCompat="@drawable/ic_job_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fjb_time_tv" />
+
+        <TextView
+            android:id="@+id/fjb_employees_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:gravity="center"
+            android:text="10,001+ employees"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:drawableStartCompat="@drawable/ic_employees"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fjb_job_type_tv" />
+
+        <TextView
+            android:id="@+id/fjb_recruiting_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:gravity="center"
+            android:text="Actively recruiting"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:drawableStartCompat="@drawable/ic_recruiting"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fjb_employees_tv" />
+
+        <Button
+            android:id="@+id/fjb_save_b"
+            style="@style/Widget.LazyEngineer.OutlineButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Save"
+            app:layout_constraintEnd_toStartOf="@+id/fjb_apply_b"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fjb_recruiting_tv" />
+
+        <Button
+            android:id="@+id/fjb_apply_b"
+            style="@style/Widget.LazyEngineer.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:text="Apply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fjb_save_b"
+            app:layout_constraintTop_toTopOf="@+id/fjb_save_b" />
+
+        <TextView
+            android:id="@+id/fjd_job_description_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/job_description"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fjb_save_b" />
+
+        <TextView
+            android:id="@+id/fjd_job_description_value_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/dummy_about"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fjd_job_description_tv" />
+
+        <TextView
+            android:id="@+id/fjb_pay_range_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Pay range"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fjd_job_description_value_tv" />
+
+        <TextView
+            android:id="@+id/fjb_pay_range_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:text="Rs. 40k - 60k"
+            app:layout_constraintBottom_toBottomOf="@+id/fjb_pay_range_tv"
+            app:layout_constraintStart_toEndOf="@+id/fjb_pay_range_tv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/profileFragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.example.lazy_engineer.ui.main.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_fragment_to_notes_fragment"
+            app:destination="@id/notes_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_file_fragment"
+            app:destination="@id/file_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_booksFragment"
+            app:destination="@id/books_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_jobsFragment"
+            app:destination="@id/jobs_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notes_fragment"
+        android:name="com.example.lazy_engineer.ui.main.notes.NotesFragment"
+        android:label="@string/notes"
+        tools:layout="@layout/fragment_notes" />
+    <fragment
+        android:id="@+id/file_fragment"
+        android:name="com.example.lazy_engineer.ui.main.file.FileFragment"
+        android:label="fragment_file"
+        tools:layout="@layout/fragment_file" />
+    <fragment
+        android:id="@+id/books_fragment"
+        android:name="com.example.lazy_engineer.ui.main.books.BooksFragment"
+        android:label="BooksFragment"
+        tools:layout="@layout/fragment_books" />
+    <fragment
+        android:id="@+id/jobs_fragment"
+        android:name="com.example.lazy_engineer.ui.main.jobs.JobsFragment"
+        android:label="JobsFragment"
+        tools:layout="@layout/fragment_jobs" />
+
+    <fragment
+        android:id="@+id/upload_fragment"
+        android:name="com.example.lazy_engineer.ui.main.upload.UploadFragment"
+        android:label="UploadFragment"
+        tools:layout="@layout/fragment_upload">
+        <action
+            android:id="@+id/action_upload_fragment_to_uploadFileFragment"
+            app:destination="@id/upload_file_fragment" />
+        <action
+            android:id="@+id/action_upload_fragment_to_uploadNotesFragment"
+            app:destination="@id/upload_notes_fragment" />
+        <action
+            android:id="@+id/action_upload_fragment_to_uploadJobFragment"
+            app:destination="@id/upload_job_fragment" />
+        <action
+            android:id="@+id/action_upload_fragment_to_uploadPaperFragment"
+            app:destination="@id/upload_paper_fragment" />
+        <action
+            android:id="@+id/action_upload_fragment_to_uploadBookFragment"
+            app:destination="@id/upload_book_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upload_file_fragment"
+        android:name="com.example.lazy_engineer.ui.main.upload_file.UploadFileFragment"
+        android:label="fragment_upload_file"
+        tools:layout="@layout/fragment_upload_file" />
+    <fragment
+        android:id="@+id/upload_notes_fragment"
+        android:name="com.example.lazy_engineer.ui.main.upload_notes.UploadNotesFragment"
+        android:label="fragment_upload_notes"
+        tools:layout="@layout/fragment_upload_notes" />
+    <fragment
+        android:id="@+id/upload_job_fragment"
+        android:name="com.example.lazy_engineer.ui.main.upload_job.UploadJobFragment"
+        android:label="fragment_upload_job"
+        tools:layout="@layout/fragment_upload_job" />
+    <fragment
+        android:id="@+id/upload_paper_fragment"
+        android:name="com.example.lazy_engineer.ui.main.upload_paper.UploadPaperFragment"
+        android:label="fragment_upload_paper"
+        tools:layout="@layout/fragment_upload_paper" />
+    <fragment
+        android:id="@+id/upload_book_fragment"
+        android:name="com.example.lazy_engineer.ui.main.upload_book.UploadBookFragment"
+        android:label="fragment_upload_book"
+        tools:layout="@layout/fragment_upload_book" />
+    <fragment
+        android:id="@+id/account_fragment"
+        android:name="com.example.lazy_engineer.ui.main.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_account_fragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.lazy_engineer.ui.main.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

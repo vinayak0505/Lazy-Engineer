@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="bookDetailsViewModel"
+            type="com.example.lazy_engineer.ui.main.books.book_detail.BookDetailsViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_close" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/root_padding"
+                android:clipChildren="false"
+                tools:context=".ui.main.books.book_detail.BookDetailsFragment">
+
+                <ImageView
+                    android:id="@+id/bd_image_iv"
+                    android:layout_width="@dimen/_96sdp"
+                    android:layout_height="@dimen/_147sdp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/image_book_cover" />
+
+                <TextView
+                    android:id="@+id/fbd_title_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Computer Graphics And Multimedia"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/fbd_author_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/fbd_author_tv" />
+
+                <TextView
+                    android:id="@+id/fbd_author_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/item_text_start_margin"
+                    android:text="By Vinayak agarwal,Dr .harman jaggi"
+                    android:textAppearance="?attr/textAppearanceOverline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/bd_image_iv"
+                    app:layout_constraintTop_toTopOf="@+id/bd_image_iv" />
+
+                <TextView
+                    android:id="@+id/fbd_category_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="for Computer Graphics"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/fbd_title_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/fbd_title_tv" />
+
+                <TextView
+                    android:id="@+id/tbd_rating_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="4.5 Rating"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:drawableTopCompat="@drawable/ic_star"
+                    app:layout_constraintBottom_toBottomOf="@+id/bd_image_iv"
+                    app:layout_constraintEnd_toStartOf="@+id/tbd_book_type_tv"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/bd_image_iv"
+                    app:layout_constraintStart_toStartOf="@+id/fbd_category_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/fbd_category_tv" />
+
+                <TextView
+                    android:id="@+id/tbd_book_type_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="E-Book"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:drawableTopCompat="@drawable/ic_book"
+                    app:layout_constraintEnd_toStartOf="@+id/tbd_pages_tv"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tbd_rating_tv"
+                    app:layout_constraintTop_toTopOf="@+id/tbd_rating_tv" />
+
+                <TextView
+                    android:id="@+id/tbd_pages_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="200 Pages"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:drawableTopCompat="@drawable/ic_pages"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tbd_book_type_tv"
+                    app:layout_constraintTop_toTopOf="@+id/tbd_book_type_tv" />
+
+                <Button
+                    android:id="@+id/button"
+                    style="@style/Widget.LazyEngineer.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Download"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bd_image_iv" />
+
+                <TextView
+                    android:id="@+id/tbd_about_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button" />
+
+                <TextView
+                    android:id="@+id/tbd_about_value_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/dummy_about"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tbd_about_tv" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/appCompatRatingBar"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_21sdp"
+                    android:progressTint="#FFD500"
+                    android:rating="3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tbd_about_value_tv" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="Rate This Book"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintEnd_toEndOf="@+id/appCompatRatingBar"
+                    app:layout_constraintStart_toStartOf="@+id/appCompatRatingBar"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatRatingBar" />
+
+                <include
+                    android:id="@+id/fbd_comment_i"
+                    layout="@layout/list_item_book_details_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/fbd_similar_book_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="Similar Books"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fbd_comment_i" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fbd_similar_book_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fbd_similar_book_tv"
+                    tools:listitem="@layout/list_item_similar_book" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

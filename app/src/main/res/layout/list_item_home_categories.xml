@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="category"
+            type="com.example.lazy_engineer.ui.main.home.HomeCategory" />
+
+        <variable
+            name="clickListener"
+            type="com.example.lazy_engineer.ui.main.home.HomeCategoryClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_6sdp"
+        android:background="@drawable/background_grey_stroke_8_corner"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{() -> clickListener.onClick(category)}"
+        android:orientation="vertical">
+
+        <ImageView
+            image_from_resource="@{category.imageId}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            tools:src="@drawable/course_image" />
+
+        <TextView
+            style="?attr/textAppearanceHeadline5"
+            text_from_resource="@{category.titleId}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12ssp"
+            android:layout_marginTop="@dimen/_7ssp"
+            tools:text="Notes" />
+
+        <TextView
+            style="?attr/textAppearanceBody2"
+            text_from_resource="@{category.summaryId}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12ssp"
+            android:layout_marginBottom="@dimen/_12ssp"
+            tools:text="You can find handwriten notes from all students." />
+    </LinearLayout>
+</layout>

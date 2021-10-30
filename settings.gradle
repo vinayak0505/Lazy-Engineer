@@ -1,0 +1,2 @@
+rootProject.name = "Lazy_engineer"
+include ':app'

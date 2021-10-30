@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Theme.LazyEngineer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!--Material shape attributes-->
+        <item name="shapeAppearanceSmallComponent">
+            @style/ShapeAppearance.LazyEngineer.SmallComponent
+        </item>
+        <item name="shapeAppearanceMediumComponent">
+            @style/ShapeAppearance.LazyEngineer.MediumComponent
+        </item>
+        <item name="shapeAppearanceLargeComponent">
+            @style/ShapeAppearance.LazyEngineer.LargeComponent
+        </item>
+
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.LazyEngineer.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.LazyEngineer.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.LazyEngineer.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.LazyEngineer.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.LazyEngineer.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.LazyEngineer.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.LazyEngineer.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.LazyEngineer.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.LazyEngineer.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.LazyEngineer.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.LazyEngineer.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.LazyEngineer.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.LazyEngineer.Overline</item>
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryLightColor</item>
+        <item name="colorOnSecondary">@color/secondaryTextColor</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <!-- Bottom sheet theme-->
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.LazyEngineer.BottomSheetDialog</item>
+
+        <!-- Customize your theme here. -->
+        <item name="endIconTint">@color/icon_color</item>
+
+    </style>
+
+    <style name="Theme.LazyEngineer.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.LazyEngineer.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.LazyEngineer.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ThemeOverlay.LazyEngineer.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
+    </style>
+
+
+</resources>

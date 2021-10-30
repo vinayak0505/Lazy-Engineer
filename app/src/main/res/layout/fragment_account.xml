@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.lazy_engineer.ui.main.account.AccountViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.main.account.AccountFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_item_settings"
+            android:paddingVertical="@dimen/login_root_padding">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/account_user_profile_image"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/ShapeAppearance.LazyEngineer.CircularImage" />
+
+            <TextView
+                android:id="@+id/account_user_first_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="Vinayak Agarwal"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View and edit profile"
+                android:textAppearance="?attr/textAppearanceBody2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/account_user_first_name_tv"
+                app:layout_constraintTop_toBottomOf="@+id/account_user_first_name_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawablePadding="@dimen/_31sdp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:onClick="@{() -> viewModel.onProfileClicked()}"
+            android:padding="@dimen/padding_item_settings"
+            android:text="@string/profile"
+            android:textAppearance="?attr/textAppearanceBody1"
+            app:drawableEndCompat="@drawable/ic_account" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/root_padding"
+            android:background="@color/dividerColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawablePadding="@dimen/_31sdp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_item_settings"
+            android:text="@string/invite"
+            android:textAppearance="?attr/textAppearanceBody1"
+            app:drawableEndCompat="@drawable/ic_user_add" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/root_padding"
+            android:background="@color/dividerColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawablePadding="@dimen/_31sdp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_item_settings"
+            android:text="@string/notification"
+            android:textAppearance="?attr/textAppearanceBody1"
+            app:drawableEndCompat="@drawable/ic_notifications" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/root_padding"
+            android:background="@color/dividerColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawablePadding="@dimen/_31sdp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_item_settings"
+            android:text="@string/profile"
+            android:textAppearance="?attr/textAppearanceBody1"
+            app:drawableEndCompat="@drawable/ic_email" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/root_padding"
+            android:background="@color/dividerColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawablePadding="@dimen/_31sdp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_item_settings"
+            android:text="@string/rate_us"
+            android:textAppearance="?attr/textAppearanceBody1"
+            app:drawableEndCompat="@drawable/ic_rate_us" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/root_padding"
+            android:background="@color/dividerColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawablePadding="@dimen/_31sdp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_item_settings"
+            android:text="@string/settings"
+            android:textAppearance="?attr/textAppearanceBody1"
+            app:drawableEndCompat="@drawable/ic_settings" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/root_padding"
+            android:background="@color/dividerColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawablePadding="@dimen/_31sdp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_item_settings"
+            android:text="@string/rate_us"
+            android:textAppearance="?attr/textAppearanceBody1"
+            app:drawableEndCompat="@drawable/ic_star" />
+
+    </LinearLayout>
+</layout>

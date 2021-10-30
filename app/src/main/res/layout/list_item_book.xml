@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="book"
+            type="com.example.lazy_engineer.ui.main.books.Book" />
+
+        <variable
+            name="bookClickListener"
+            type="com.example.lazy_engineer.ui.main.books.BookClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_btw_linear_items"
+        android:background="@drawable/background_grey_stroke_8_corner"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{() -> bookClickListener.onClick(book)}">
+
+        <ImageView
+            android:id="@+id/item_book_iv"
+            image_from_resource="@{book.image}"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="@dimen/_80sdp"
+            android:padding="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/image_file" />
+
+        <TextView
+            string_from_int="@{book.noOfPages}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="@drawable/background_black_gradient"
+            android:gravity="end"
+            android:paddingTop="@dimen/_20sdp"
+            android:paddingEnd="2dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/item_book_iv"
+            app:layout_constraintStart_toStartOf="@+id/item_book_iv"
+            tools:ignore="RtlSymmetry"
+            tools:text="200" />
+
+        <TextView
+            android:id="@+id/bi_author_tv"
+            text_from_resource="@{book.author}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/item_text_start_margin"
+            android:layout_marginTop="@dimen/list_item_margin"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_book_iv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="By Vinayak agarwal,Dr .harman singh jaggi" />
+
+        <TextView
+            android:id="@+id/bi_summary_tv"
+            text_from_resource="@{book.title}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintEnd_toEndOf="@+id/bi_author_tv"
+            app:layout_constraintStart_toStartOf="@id/bi_author_tv"
+            app:layout_constraintTop_toBottomOf="@id/bi_author_tv"
+            tools:text="Computer Graphics and Multimedia" />
+
+        <TextView
+            android:id="@+id/bi_about_tv"
+            text_from_resource="@{book.description}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/list_item_margin"
+            android:lines="2"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/bi_summary_tv"
+            app:layout_constraintStart_toStartOf="@id/bi_summary_tv"
+            app:layout_constraintTop_toBottomOf="@id/bi_summary_tv"
+            tools:text="Computer Graphics and Multimedia" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

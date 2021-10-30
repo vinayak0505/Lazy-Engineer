@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="file"
+            type="com.example.lazy_engineer.ui.main.file.File" />
+
+        <variable
+            name="fileClickListener"
+            type="com.example.lazy_engineer.ui.main.file.FileClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_btw_linear_items"
+        android:background="@drawable/background_grey_stroke_8_corner"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{() -> fileClickListener.onClick(file)}">
+
+        <ImageView
+            android:id="@+id/file_iv"
+            image_from_resource="@{file.image}"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/image_file" />
+
+
+        <TextView
+            android:id="@+id/file_title_tv"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            text_from_resource="@{file.title}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/item_text_start_margin"
+            android:layout_marginTop="@dimen/list_item_margin"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/file_iv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Computer Graphics and Multimedia" />
+
+        <androidx.constraintlayout.widget.Group
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/file_subject_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="@string/subject_"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintStart_toStartOf="@+id/file_title_tv"
+            app:layout_constraintTop_toBottomOf="@+id/file_title_tv" />
+
+        <TextView
+            android:id="@+id/file_college_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="@string/college_"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintStart_toStartOf="@+id/file_title_tv"
+            app:layout_constraintTop_toBottomOf="@+id/file_subject_tv" />
+
+        <TextView
+            android:id="@+id/file_year_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/list_item_margin"
+            android:text="@string/year_"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/file_title_tv"
+            app:layout_constraintTop_toBottomOf="@+id/file_college_tv"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:barrierMargin="@dimen/_3sdp"
+            app:constraint_referenced_ids="file_year_tv,file_college_tv,file_subject_tv"
+            tools:layout_editor_absoluteX="167dp"
+            tools:layout_editor_absoluteY="44dp" />
+
+        <TextView
+            text_from_resource="@{file.subject}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/file_subject_tv"
+            tools:text="@string/computer_graphics" />
+
+        <TextView
+            text_from_resource="@{file.college}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/file_college_tv"
+            tools:text="GTBIT" />
+
+        <TextView
+            string_from_int="@{file.year}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/file_year_tv"
+            tools:text="2020" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

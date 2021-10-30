@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.LazyEngineer.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.LazyEngineer.OutlineButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/primaryColor</item>
+    </style>
+
+    <style name="Widget.LazyEngineer.RatingBar.Indicator" parent="Widget.AppCompat.RatingBar.Indicator">
+        <item name="android:drawable">@drawable/ic_star</item>
+        <item name="android:progressDrawable">@drawable/ic_star</item>
+    </style>
+
+    <style name="Widget.LazyEngineer.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">@dimen/text_view_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/text_view_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/text_view_corner_radius</item>
+        <item name="boxCornerRadiusTopStart">@dimen/text_view_corner_radius</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/text_view_corner_radius</item>
+    </style>
+
+    <style name="Widget.LazyEngineer.TextInputLayout.OutlinedBox.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxCornerRadiusBottomEnd">@dimen/text_view_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/text_view_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/text_view_corner_radius</item>
+        <item name="boxCornerRadiusTopStart">@dimen/text_view_corner_radius</item>
+    </style>
+
+    <style name="Widget.LazyEngineerWidget.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu.Time" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="boxCornerRadiusBottomEnd">@dimen/time_drop_down_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/time_drop_down_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/time_drop_down_corner_radius</item>
+        <item name="boxCornerRadiusTopStart">@dimen/time_drop_down_corner_radius</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="ModalBottomSheetDialog" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="backgroundTint">@color/white</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.LazyEngineer.LargeComponent</item>
+    </style>
+
+
+
+</resources>

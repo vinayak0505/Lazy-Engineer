@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.LazyEngineer.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/rubik_black_italic</item>
+        <item name="android:fontFamily">@font/rubik_black_italic</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/rubik_light</item>
+        <item name="android:fontFamily">@font/rubik_light</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/rubik_black_italic</item>
+        <item name="android:fontFamily">@font/rubik_black_italic</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/rubik_regular</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/rubik_regular</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/rubik_bold_italic</item>
+        <item name="android:fontFamily">@font/rubik_bold_italic</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/rubik_medium</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/rubik_medium</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/rubik_regular</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/rubik_regular</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/rubik_bold</item>
+        <item name="android:fontFamily">@font/rubik_bold</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/rubik_regular</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/rubik_bold</item>
+        <item name="android:fontFamily">@font/rubik_bold</item>
+    </style>
+
+    <style name="TextAppearance.LazyEngineer.BottomNavigation" parent="TextAppearance.LazyEngineer.Caption">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+</resources>

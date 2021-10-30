@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.lazy_engineer.ui.main.file.FileViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.main.file.FileFragment">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/file_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/filter"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="File" />
+
+        <include layout="@layout/view_search" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/file_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_item_file" />
+
+    </LinearLayout>
+</layout>
